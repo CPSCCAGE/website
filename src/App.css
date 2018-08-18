@@ -23,6 +23,25 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.centered {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+.forms {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 3em;
+}
+.table {
+  width: 75%;
 }
