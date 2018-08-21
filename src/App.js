@@ -9,26 +9,46 @@ class CustInfo extends Component {
         <div className="centered">
           <h1>Order Form</h1>
         </div>
-        <div className="forms">
-          <form>
-            <div>
-              <label>
-                Name: <input type="text" name="name" />
-              </label>
+
+        <div class="container">
+          <h2 />
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="Name">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter name"
+                name="name"
+              />
             </div>
-            <div>
-              <label>
-                Phone: <input type="text" name="phone" />
-              </label>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter email"
+                id="email"
+              />
             </div>
-            <div>
+            <span class="form-group">
+              <label for="Delivery Date">Delivery Date:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter date for delivery"
+                name="delivery"
+              />
+            </span>
+
+            <div class="checkbox">
               <label>
-                Email: <input type="text" name="email" />
+                <input type="checkbox" name="remember" /> Remember me
               </label>
             </div>
           </form>
         </div>
-        <div id="name"> </div>
+        <div id="name" />
         <div id="phoneNumber"> </div>
         <div id="email"> </div>
         <div id="pickupDate"> </div>
@@ -49,12 +69,17 @@ class FillForm extends Component {
   state = {
     headers: ["Product Code", "Product Name", "Quantity", "Additional notes"],
     items: [
-      ["Firstname ", "Lastname ", "", "hello "],
-      ["Firstname ", "Lastname ", "", "hello "],
-      ["Firstname ", "Lastname ", "", "hello "],
-      ["Firstname ", "Lastname ", "", "hello "],
-      ["Firstname ", "Lastname ", "", "hello "],
-      ["Firstname1 ", "Lastname1 ", "", "hello1 "]
+      ["0557 ", "Bread ", "", ""],
+      ["7586 ", "Bread2 ", "", ""],
+      ["5557 ", "Bread3 ", "", ""],
+      ["4451 ", "Bread4 ", "", ""],
+      ["4456 ", "Bread5 ", "", ""],
+      ["0557 ", "Bread ", "", ""],
+      ["7586 ", "Bread2 ", "", ""],
+      ["5557 ", "Bread3 ", "", ""],
+      ["4451 ", "Bread4 ", "", ""],
+      ["4456 ", "Bread5 ", "", ""],
+      ["4458 ", "Bread6 ", "", ""]
     ]
   };
 
@@ -113,7 +138,13 @@ class FillForm extends Component {
           </table>
         </div>
         <div className="centered ">
-          <button onClick={this.handleClick}>Send Order</button>
+          <button
+            type="submit"
+            class="btn btn-default"
+            onClick={this.handleClick}
+          >
+            Send Order
+          </button>
         </div>
       </div>
     );
